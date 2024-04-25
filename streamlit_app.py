@@ -3,6 +3,7 @@ import pandas as pd
 import pdfkit
 import base64
 
+url = "https://raw.githubusercontent.com/aliannan99/POS-System-Linkers/main/Updated_FinalData305.csv"
 # User credentials
 users = {
     "jg001": {"name": "Jack Gustu", "password": "123456"},
@@ -82,7 +83,7 @@ else:
     # Load data function
     def load_data():
         try:
-            data = pd.read_csv(r"C:\Users\user\OneDrive\Desktop\Updated_FinalData305.csv")
+            data = pd.read_csv(url)
             return data
         except Exception as e:
             st.error(f"Error loading data: {e}")
